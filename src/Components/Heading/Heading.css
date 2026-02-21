@@ -1,0 +1,8 @@
+.heading-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: aliceblue;
+    position: sticky;
+    top: 0;
+}

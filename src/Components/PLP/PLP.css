@@ -1,0 +1,35 @@
+.plp-container {
+    padding: 15px;
+
+    .plp-wrapper {
+        margin-top: 15px;
+
+        .filter {
+            margin-top: 15px;
+        }
+
+        .product-list-wrapper {
+            .product-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+    
+                .product-item {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 10px;
+                    margin: 15px 10px;
+                    text-align: center;
+                    height: 450px;
+                }
+            }
+    
+    
+            .load-more-btn {
+                width: fit-content;
+                margin: 10px auto;
+            }   
+        }
+    }
+} 
+
