@@ -1,6 +1,18 @@
 .plp-container {
     padding: 15px;
 
+    .plp-toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .product-sorting {
+            cursor: pointer;
+            padding: 3px;
+        }
+    }
+
     .plp-wrapper {
         margin-top: 15px;
 
@@ -13,7 +25,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-    
+
                 .product-item {
                     border: 1px solid #ccc;
                     border-radius: 4px;
@@ -23,13 +35,12 @@
                     height: 450px;
                 }
             }
-    
-    
+
+
             .load-more-btn {
                 width: fit-content;
                 margin: 10px auto;
-            }   
+            }
         }
     }
-} 
-
+}
