@@ -1,0 +1,10 @@
+.priceSlider-wrapper{
+    .filter-name {
+        margin-bottom: 10px; 
+    }
+
+    .slider-wrapper {
+        position: relative;
+        height: 30;
+    }
+}

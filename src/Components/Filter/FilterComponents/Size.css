@@ -1,0 +1,23 @@
+.size-wrapper {
+    .size-options {
+        list-style-type: none;
+
+        .size-option {
+            border: 1px solid #000;
+            border-radius: 4px;
+            color: #666;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 12px;
+            height: 23px;
+            line-height: 23px;
+            margin: 5px 10px 5px 0;
+            min-width: 50px;
+            width: 150px;
+            padding: 0 4px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+}

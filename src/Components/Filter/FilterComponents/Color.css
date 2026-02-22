@@ -1,0 +1,17 @@
+.color-wrapper {
+    .color-options {    
+        .color-option {
+            border: 2px solid #fff;
+            background-color: #666;
+            display: block;
+            height: 26px;
+            margin-right: 6px;
+            overflow: hidden;
+            padding: 0;
+            width: 26px;
+            cursor: pointer;
+        }
+    }
+}
+
+
