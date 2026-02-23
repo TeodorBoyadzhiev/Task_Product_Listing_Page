@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react'
 
 const PLP = () => {
     const [products, setProducts] = useState(null);
+    const [shortDescription, setShortDescription] = useState('');
     const [displayLimit, setDisplayLimit] = useState(7);
 
     const location = useLocation();
@@ -22,8 +23,9 @@ const PLP = () => {
     useEffect(() => {
         setProducts(null);
 
-        const newProducts = categoryProducts(cat);
+        const {newProducts, shortDescription} = categoryProducts(cat);
         setProducts(newProducts);
+        setShortDescription(shortDescription);
         setDisplayLimit(7)
     }, [location.pathname]);
 
@@ -39,13 +41,21 @@ const PLP = () => {
     <div className="plp-container">
         <div className='plp-toolbar'>
             <ProductCounter />
-            <Sorting />
         </div>
         <div className="plp-wrapper row row-cols-2">
             <div className="filter col-2">
                 <Filter />
             </div>
             <div className="product-list-wrapper col-10">
+                <div className="product-list-heading d-flex justify-content-between">
+                    <div className="category-description">
+                        <div className="category-title">{cat}</div>
+                        <div className="category-shortDescription">{shortDescription}</div>
+                    </div>
+                    
+                    <Sorting />
+                </div>
+
                 <div className="product-list row row-cols-4">
                     {cat ? products?.products?.slice(0, displayLimit).map((product) => (
                         <ProductTile product={product} key={product.id} />

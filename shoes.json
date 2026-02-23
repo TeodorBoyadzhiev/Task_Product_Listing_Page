@@ -1,0 +1,155 @@
+{
+  "products": [
+    {
+      "id": "sh0012",
+      "name": "AirFlex Running Shoes",
+      "image": "https://fdcdn.akamaized.net/m/780x1170/products/88719/88718745/images/res_be075688f77b20923c71a4f60422652a.jpg?s=kyv6WYmkBslr",
+      "shortDescription": "Lightweight running shoes with breathable mesh upper.",
+      "price": { "original": 89.99, "discounted": 74.99, "currency": "USD" },
+      "rating": 4.7,
+      "sizes": ["40","41","42","43","44","45"],
+      "colors": ["Black","Blue"],
+      "variants": [
+        {"size":"42","color":"Black","stock":8},
+        {"size":"43","color":"Black","stock":6},
+        {"size":"44","color":"Blue","stock":5}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id": "sh0023",
+      "name": "ProRun Cushion Trainers",
+      "image": "https://fdcdn.akamaized.net/m/780x1170/products/16774/16773561/images/res_43a15c0e5322ee6edbdfd151c9662a47.jpg?s=524G_3F6UMRP",
+      "shortDescription": "High-cushion trainers designed for long-distance comfort.",
+      "price": { "original": 109.99, "currency": "USD" },
+      "rating": 4.8,
+      "sizes": ["41","42","43","44","45"],
+      "colors": ["Gray","Neon Green"],
+      "variants": [
+        {"size":"42","color":"Gray","stock":7},
+        {"size":"44","color":"Neon Green","stock":4}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0032",
+      "name":"StreetSport Sneakers",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/113997/113996435/images/res_77ff9baa59f13cbba1c23830ab432413.jpg?s=s9EfnEEeBsfy",
+      "shortDescription":"Versatile sporty sneakers for gym and casual wear.",
+      "price":{"original":79.5,"discounted":65.5,"currency":"USD"},
+      "rating":4.5,
+      "sizes":["40","41","42","43","44"],
+      "colors":["White","Black"],
+      "variants":[
+        {"size":"41","color":"White","stock":9},
+        {"size":"43","color":"Black","stock":6}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0042",
+      "name":"UltraBoost Sport Shoes",
+      "image":"",
+      "shortDescription":"Responsive boost sole with energy-return cushioning.",
+      "price":{"original":129.99,"currency":"USD"},
+      "rating":4.9,
+      "sizes":["41","42","43","44","45","46"],
+      "colors":["Black","White","Red"],
+      "variants":[
+        {"size":"42","color":"Red","stock":5},
+        {"size":"44","color":"Black","stock":7}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0052",
+      "name":"TrailGrip Outdoor Shoes",
+      "image":"",
+      "shortDescription":"Durable trail running shoes with strong grip outsole.",
+      "price":{"original":119.0,"discounted":99.0,"currency":"USD"},
+      "rating":4.6,
+      "sizes":["41","42","43","44","45"],
+      "colors":["Olive","Black"],
+      "variants":[
+        {"size":"43","color":"Olive","stock":6},
+        {"size":"45","color":"Black","stock":3}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0062",
+      "name":"GymCore Training Shoes",
+      "image":"",
+      "shortDescription":"Stable cross-training shoes ideal for gym workouts.",
+      "price":{"original":84.99,"currency":"USD"},
+      "rating":4.4,
+      "sizes":["40","41","42","43","44","45"],
+      "colors":["Black","Orange"],
+      "variants":[
+        {"size":"41","color":"Orange","stock":4},
+        {"size":"42","color":"Black","stock":10}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0072",
+      "name":"Velocity Knit Runners",
+      "image":"",
+      "shortDescription":"Flexible knit running shoes with sock-like fit.",
+      "price":{"original":94.5,"discounted":79.5,"currency":"USD"},
+      "rating":4.5,
+      "sizes":["41","42","43","44","45"],
+      "colors":["Blue","Black","White"],
+      "variants":[
+        {"size":"42","color":"Blue","stock":8},
+        {"size":"44","color":"White","stock":5}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0082",
+      "name":"UrbanMove Sport Sneakers",
+      "image":"",
+      "shortDescription":"Comfortable everyday sport sneakers with modern design.",
+      "price":{"original":72.99,"currency":"USD"},
+      "rating":4.2,
+      "sizes":["40","41","42","43","44"],
+      "colors":["Gray","White"],
+      "variants":[
+        {"size":"40","color":"Gray","stock":6},
+        {"size":"43","color":"White","stock":7}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0092",
+      "name":"SprintLite Performance Shoes",
+      "image":"",
+      "shortDescription":"Ultra-light performance shoes built for speed training.",
+      "price":{"original":99.99,"discounted":84.99,"currency":"USD"},
+      "rating":4.6,
+      "sizes":["41","42","43","44","45","46"],
+      "colors":["Yellow","Black"],
+      "variants":[
+        {"size":"43","color":"Yellow","stock":5},
+        {"size":"45","color":"Black","stock":6}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"sh0102",
+      "name":"ComfortWalk Sport Shoes",
+      "image":"",
+      "shortDescription":"All-day comfort sport shoes with soft foam cushioning.",
+      "price":{"original":88.0,"currency":"USD"},
+      "rating":4.3,
+      "sizes":["40","41","42","43","44","45"],
+      "colors":["Navy","Black"],
+      "variants":[
+        {"size":"42","color":"Navy","stock":9},
+        {"size":"44","color":"Black","stock":7}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    }
+  ]
+}
