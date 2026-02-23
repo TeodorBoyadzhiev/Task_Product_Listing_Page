@@ -1,0 +1,143 @@
+{
+  "products": [
+    {
+      "id": "jn0011",
+      "name": "Classic Straight Jeans",
+      "image": "https://fdcdn.akamaized.net/m/780x1170/products/27884/27883098/images/res_b06430f1d0516e599e4f661bd922e5a1.jpg?s=MDTdWD8Amxk7",
+      "shortDescription": "Timeless straight-leg denim with comfortable mid-rise fit.",
+      "price": { "original": 59.99, "discounted": 49.99, "currency": "USD" },
+      "rating": 4.6,
+      "sizes": ["30","32","34","36","38"],
+      "colors": ["Dark Blue","Black"],
+      "variants": [
+        {"size":"32","color":"Dark Blue","stock":10},
+        {"size":"34","color":"Dark Blue","stock":7},
+        {"size":"36","color":"Black","stock":5}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id": "jn0022",
+      "name": "Slim Fit Stretch Jeans",
+      "image": "https://fdcdn.akamaized.net/m/780x1170/products/99475/99474761/images/res_4c70f42eec1f26f1dff1088207b4c9e0.jpg?s=VIGNIJVOcxSe",
+      "shortDescription": "Modern slim-fit jeans with stretch denim for mobility.",
+      "price": { "original": 64.99, "currency": "USD" },
+      "rating": 4.7,
+      "sizes": ["30","32","34","36"],
+      "colors": ["Indigo","Gray"],
+      "variants": [
+        {"size":"32","color":"Indigo","stock":9},
+        {"size":"34","color":"Gray","stock":6}
+      ],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0033",
+      "name":"Relaxed Comfort Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/73341/73340829/images/res_18b73ef4764e0844f21fc1d1a724a3c6.jpg?s=aFpMVzOXPdLW",
+      "shortDescription":"Relaxed-fit jeans designed for all-day comfort.",
+      "price":{"original":54.5,"discounted":44.5,"currency":"USD"},
+      "rating":4.4,
+      "sizes":["32","34","36","38","40"],
+      "colors":["Mid Blue","Stone"],
+      "variants":[{"size":"36","color":"Mid Blue","stock":8},{"size":"38","color":"Stone","stock":4}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0044",
+      "name":"Skinny Fit Urban Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/94036/94035774/images/res_80c0cd8aef7dee5d553c028864c808ed.jpg?s=St3CPps8Xbqj",
+      "shortDescription":"Skinny-fit urban denim with tapered ankle.",
+      "price":{"original":68.0,"currency":"USD"},
+      "rating":4.5,
+      "sizes":["30","32","34","36"],
+      "colors":["Black","Washed Blue"],
+      "variants":[{"size":"30","color":"Black","stock":5},{"size":"34","color":"Washed Blue","stock":6}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0055",
+      "name":"Vintage Washed Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/59488/59487821/images/res_af0b8aef8d8854de35c1bb66430bf565.jpg?s=spKX97yFeiZp",
+      "shortDescription":"Vintage-style washed denim with soft worn-in feel.",
+      "price":{"original":61.99,"discounted":52.99,"currency":"USD"},
+      "rating":4.3,
+      "sizes":["32","34","36","38"],
+      "colors":["Vintage Blue"],
+      "variants":[{"size":"34","color":"Vintage Blue","stock":7}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0066",
+      "name":"Stretch Tapered Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/100505/100504740/images/res_851473f2481c74ef1119706b12feb224.jpg?s=Hv76wwhF3LH_",
+      "shortDescription":"Tapered-leg jeans with flexible stretch denim.",
+      "price":{"original":66.25,"currency":"USD"},
+      "rating":4.6,
+      "sizes":["30","32","34","36","38"],
+      "colors":["Dark Indigo","Black"],
+      "variants":[{"size":"32","color":"Dark Indigo","stock":9},{"size":"36","color":"Black","stock":5}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0077",
+      "name":"Loose Street Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/112103/112102490/images/res_086e500ae44c6348325ff5afa6e5a50d.jpg?s=-Y6apG0yvIie",
+      "shortDescription":"Loose-fit streetwear denim with relaxed silhouette.",
+      "price":{"original":63.4,"discounted":55.4,"currency":"USD"},
+      "rating":4.2,
+      "sizes":["32","34","36","38","40"],
+      "colors":["Light Blue","Rinse"],
+      "variants":[{"size":"38","color":"Light Blue","stock":6},{"size":"34","color":"Rinse","stock":8}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0088",
+      "name":"Premium Selvedge Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/99478/99477906/images/res_06481220a6d459a935ebe59686d0a279.jpg?s=e3Cen86EqFFK",
+      "shortDescription":"High-quality selvedge denim with durable construction.",
+      "price":{"original":89.99,"currency":"USD"},
+      "rating":4.9,
+      "sizes":["30","32","34","36"],
+      "colors":["Raw Indigo"],
+      "variants":[{"size":"32","color":"Raw Indigo","stock":4},{"size":"34","color":"Raw Indigo","stock":3}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0099",
+      "name":"Everyday Basic Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/102312/102311456/images/res_7a7d10b8b5dd784d3afa8e117a911018.jpg?s=KUK3YCLHgoo3",
+      "shortDescription":"Reliable everyday denim with classic five-pocket design.",
+      "price":{"original":49.99,"discounted":39.99,"currency":"USD"},
+      "rating":4.1,
+      "sizes":["30","32","34","36","38","40"],
+      "colors":["Blue","Black"],
+      "variants":[{"size":"36","color":"Blue","stock":11},{"size":"40","color":"Black","stock":5}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0100",
+      "name":"Comfort Flex Jeans",
+      "image":"https://fdcdn.akamaized.net/m/780x1170/products/99477/99476041/images/res_f3898ef0363f9ddcfc5a48dbfb3ea1b0.jpg?s=IBGFWYUYNtq0",
+      "shortDescription":"Comfort-flex denim designed for movement and daily wear.",
+      "price":{"original":69.5,"currency":"USD"},
+      "rating":4.7,
+      "sizes":["30","32","34","36","38"],
+      "colors":["Dark Blue","Charcoal"],
+      "variants":[{"size":"32","color":"Charcoal","stock":6},{"size":"38","color":"Dark Blue","stock":7}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    },
+    {
+      "id":"jn0101",
+      "name":"Comfort Flex Jeans",
+      "image":"",
+      "shortDescription":"Comfort-flex denim designed for movement and daily wear.",
+      "price":{"original":69.5,"currency":"USD"},
+      "rating":4.7,
+      "sizes":["30","32","34","36","38"],
+      "colors":["Dark Blue","Charcoal"],
+      "variants":[{"size":"32","color":"Charcoal","stock":6},{"size":"38","color":"Dark Blue","stock":7}],
+      "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
+    }
+  ]
+}
