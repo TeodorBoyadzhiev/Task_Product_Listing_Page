@@ -23,6 +23,7 @@ const PLP = () => {
 
     useEffect(() => {
         setProducts(null);
+        setSort('asc');
 
         const {newProducts, shortDescription} = categoryProducts(cat);
         setProducts(newProducts);
