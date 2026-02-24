@@ -16,6 +16,7 @@ const PLP = () => {
     const [products, setProducts] = useState(null);
     const [shortDescription, setShortDescription] = useState('');
     const [displayLimit, setDisplayLimit] = useState(7);
+    const [sort, setSort] = useState('asc');
 
     const location = useLocation();
     const cat = location.pathname.split('/')[1];
@@ -32,6 +33,27 @@ const PLP = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
+
+    useEffect(() => {
+        if (!products?.products) return;
+
+        setProducts((prevState) => {
+            const sortedList = [...prevState.products];
+            const getActivePrice = (p) => p.price.discounted || p.price.original;
+
+            if (sort === 'price-low') {
+                sortedList.sort((a, b) => getActivePrice(a) - getActivePrice(b));
+            } else if (sort === 'price-high') {
+                sortedList.sort((a, b) => getActivePrice(b) - getActivePrice(a));
+            } else if (sort === 'asc') {
+                sortedList.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (sort === 'desc') {
+                sortedList.sort((a, b) => b.name.localeCompare(a.name));
+            }
+
+            return { ...prevState, products: sortedList };
+        });
+    }, [sort]);
 
     const handleLoadMore = () => {
         setDisplayLimit(prev => prev + 7);
@@ -53,7 +75,7 @@ const PLP = () => {
                         <div className="category-shortDescription">{shortDescription}</div>
                     </div>
                     
-                    <Sorting />
+                    <Sorting sort={sort} setSort={setSort} />
                 </div>
 
                 <div className="product-list row row-cols-4">
@@ -62,18 +84,6 @@ const PLP = () => {
                         ))
                         : <div className="no-category col">Please select a category.</div>
                     }   
-                    {/* <div>
-                        <div className="product-item col">Product 5</div>
-                    </div>
-                    <div>
-                        <div className="product-item col">Product 6</div>
-                    </div>
-                    <div>
-                        <div className="product-item col">Product 7</div>
-                    </div>
-                    <div>
-                        <div className="product-item col">Product 8</div>
-                    </div> */}
                 </div>
                 <div className="load-more-btn">
                    {products?.products?.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
