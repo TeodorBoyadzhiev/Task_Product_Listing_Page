@@ -8,7 +8,7 @@
       "price": { "original": 19.99, "discounted": 14.99, "currency": "USD" },
       "rating": 4.5,
       "sizes": ["S","M","L","XL"],
-      "colors": ["Black","White","Navy"],
+      "colors": ["Black"],
       "variants":[
         {"size":"S","color":"Black","stock":12},
         {"size":"M","color":"Black","stock":8},
@@ -24,20 +24,19 @@
       "price": { "original": 24.99, "currency": "USD" },
       "rating": 4.8,
       "sizes":["M","L","XL"],
-      "colors":["White","Gray"],
+      "colors":["White"],
       "variants":[
         {"size":"M","color":"White","stock":6},
-        {"size":"L","color":"Gray","stock":5}
+        {"size":"L","color":"Blue","stock":5}
       ],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
-
     {
       "id":"ts003","name":"Vintage Washed Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/80782/80781468/images/res_f9505e4964d69c62f478f7db971a6aa1.jpg?s=6eBTFzghpJHG",
       "shortDescription":"Garment-washed tee with a vintage soft feel.",
       "price":{"original":21.99,"discounted":17.99,"currency":"USD"},
-      "rating":4.4,"sizes":["S","M","L","XL"],"colors":["Olive","Cream","Black"],
-      "variants":[{"size":"M","color":"Olive","stock":7},{"size":"L","color":"Black","stock":9}],
+      "rating":4.4,"sizes":["S","M","L","XL"],"colors":["Black"],
+      "variants":[{"size":"M","color":"Green","stock":7},{"size":"L","color":"Black","stock":9}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -52,8 +51,8 @@
       "id":"ts005","name":"Minimal Logo T-Shirt","image":"https://fdcdn.akamaized.net/m/780x1170/products/95109/95108325/images/res_15705d04e1623825adb601d767f18989.jpg?s=VMGNBhhBT77E",
       "shortDescription":"Clean minimalist T-shirt with subtle chest logo.",
       "price":{"original":18.99,"discounted":15.99,"currency":"USD"},
-      "rating":4.3,"sizes":["S","M","L","XL"],"colors":["White","Sand","Black"],
-      "variants":[{"size":"L","color":"Sand","stock":10},{"size":"M","color":"White","stock":8}],
+      "rating":4.3,"sizes":["S","M","L","XL"],"colors":["White","Green","Black"],
+      "variants":[{"size":"L","color":"Green","stock":10},{"size":"M","color":"White","stock":8}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -61,7 +60,7 @@
       "shortDescription":"Relaxed oversized fit for modern streetwear style.",
       "price":{"original":27.99,"currency":"USD"},
       "rating":4.7,"sizes":["M","L","XL"],"colors":["Black","Blue"],
-      "variants":[{"size":"XL","color":"Black","stock":4},{"size":"L","color":"Beige","stock":6}],
+      "variants":[{"size":"XL","color":"Black","stock":4},{"size":"L","color":"Blue","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -76,48 +75,47 @@
       "id":"ts008","name":"Striped Casual Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/94039/94038453/images/res_f7e88a3c56373965421b83157c057f4e.jpg?s=TkunBBXq3yIt",
       "shortDescription":"Classic striped T-shirt for casual outfits.",
       "price":{"original":20.0,"currency":"USD"},
-      "rating":4.2,"sizes":["S","M","L"],"colors":["Blue","Black/White"],
-      "variants":[{"size":"M","color":"Navy/White","stock":7},{"size":"L","color":"Black/White","stock":5}],
+      "rating":4.2,"sizes":["S","M","L"],"colors":["Blue","White"],
+      "variants":[{"size":"M","color":"Blue","stock":7},{"size":"L","color":"White","stock":5}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
       "id":"ts009","name":"Soft Touch Modal Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/84320/84319849/images/res_fbcf24fc34238bc58f972c40325c7839.jpg?s=qAbZSKTdzVVu",
       "shortDescription":"Ultra-soft modal blend T-shirt with smooth finish.",
       "price":{"original":25.25,"currency":"USD"},
-      "rating":4.5,"sizes":["S","M","L","XL"],"colors":["Gray","Black","Green"],
-      "variants":[{"size":"S","color":"Gray","stock":6},{"size":"XL","color":"Wine","stock":3}],
+      "rating":4.5,"sizes":["S","M","L","XL"],"colors":["WhiteBlue","Black","Green"],
+      "variants":[{"size":"S","color":"WhiteBlue","stock":6},{"size":"XL","color":"Black","stock":3}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
       "id":"ts010","name":"Summer Light Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/84133/84132617/images/res_307201c7b2c9c26f9651db81784c8938.jpg?s=AfdcV0lKyabl",
       "shortDescription":"Lightweight breathable tee perfect for hot weather.",
       "price":{"original":17.99,"discounted":13.99,"currency":"USD"},
-      "rating":4.1,"sizes":["S","M","L"],"colors":["Yellow","White","Green"],
-      "variants":[{"size":"M","color":"Sky","stock":10},{"size":"L","color":"White","stock":8}],
+      "rating":4.1,"sizes":["S","M","L"],"colors":["Blue","White","Green"],
+      "variants":[{"size":"M","color":"Blue","stock":10},{"size":"L","color":"White","stock":8}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
-
     {
       "id":"ts011","name":"Heavyweight Premium Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/94038/94037220/images/res_d227c77f565b805e98106894b09ca932.jpg?s=HT_nI8ZGcAgL",
       "shortDescription":"Durable heavyweight cotton for structured fit.",
       "price":{"original":28.99,"currency":"USD"},
-      "rating":4.8,"sizes":["M","L","XL"],"colors":["Black","Charcoal", "Blue"],
-      "variants":[{"size":"L","color":"Charcoal","stock":6}],
+      "rating":4.8,"sizes":["M","L","XL"],"colors":["Black","WhiteBlue", "Blue"],
+      "variants":[{"size":"L","color":"WhiteBlue","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
       "id":"ts012","name":"Retro Graphic Tee","image":"",
       "shortDescription":"Retro inspired graphic print cotton T-shirt.",
       "price":{"original":22.75,"discounted":18.75,"currency":"USD"},
-      "rating":4.4,"sizes":["S","M","L","XL"],"colors":["Black","Gray"],
-      "variants":[{"size":"M","color":"Cream","stock":9}],
+      "rating":4.4,"sizes":["S","M","L","XL"],"colors":["Black","White"],
+      "variants":[{"size":"M","color":"White","stock":9}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
       "id":"ts013","name":"Everyday Basic Tee","image":"",
       "shortDescription":"Affordable basic tee for daily wear.",
       "price":{"original":15.99,"currency":"USD"},
-      "rating":4.0,"sizes":["S","M","L","XL"],"colors":["Black","White","Gray"],
+      "rating":4.0,"sizes":["S","M","L","XL"],"colors":["Black","White","Blue"],
       "variants":[{"size":"S","color":"White","stock":14}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
@@ -125,16 +123,16 @@
       "id":"ts014","name":"Contrast Collar Tee","image":"",
       "shortDescription":"Stylish T-shirt with contrast ribbed collar.",
       "price":{"original":21.5,"currency":"USD"},
-      "rating":4.3,"sizes":["M","L","XL"],"colors":["White/Black","Gray/Black"],
-      "variants":[{"size":"L","color":"White/Black","stock":5}],
+      "rating":4.3,"sizes":["M","L","XL"],"colors":["White","Black","Blue"],
+      "variants":[{"size":"L","color":"White","stock":5}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
       "id":"ts015","name":"Pocket Detail Tee","image":"",
       "shortDescription":"Casual cotton tee featuring chest pocket detail.",
       "price":{"original":19.49,"discounted":16.49,"currency":"USD"},
-      "rating":4.2,"sizes":["S","M","L"],"colors":["Navy","Khaki"],
-      "variants":[{"size":"M","color":"Navy","stock":7}],
+      "rating":4.2,"sizes":["S","M","L"],"colors":["Blue","Green"],
+      "variants":[{"size":"M","color":"Blue","stock":7}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -149,16 +147,16 @@
       "id":"ts017","name":"Sport Mesh Tee","image":"",
       "shortDescription":"Mesh panel sports tee for airflow and comfort.",
       "price":{"original":26.99,"currency":"USD"},
-      "rating":4.6,"sizes":["S","M","L"],"colors":["Red","Black"],
-      "variants":[{"size":"S","color":"Red","stock":6}],
+      "rating":4.6,"sizes":["S","M","L"],"colors":["Blue","Black"],
+      "variants":[{"size":"S","color":"Blue","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
       "id":"ts018","name":"Soft Bamboo Tee","image":"",
       "shortDescription":"Eco-friendly bamboo fabric with silky softness.",
       "price":{"original":29.99,"discounted":24.99,"currency":"USD"},
-      "rating":4.7,"sizes":["S","M","L","XL"],"colors":["Forest","Black"],
-      "variants":[{"size":"M","color":"Forest","stock":5}],
+      "rating":4.7,"sizes":["S","M","L","XL"],"colors":["Green","Black"],
+      "variants":[{"size":"M","color":"Green","stock":5}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -173,8 +171,8 @@
       "id":"ts020","name":"Signature Collection Tee","image":"",
       "shortDescription":"Premium signature series cotton T-shirt.",
       "price":{"original":31.99,"currency":"USD"},
-      "rating":4.9,"sizes":["M","L","XL"],"colors":["Black","Ivory"],
-      "variants":[{"size":"M","color":"Ivory","stock":6}],
+      "rating":4.9,"sizes":["M","L","XL"],"colors":["Black","WhiteBlue"],
+      "variants":[{"size":"M","color":"WhiteBlue","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     }
   ]

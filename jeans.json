@@ -8,10 +8,10 @@
       "price": { "original": 59.99, "discounted": 49.99, "currency": "USD" },
       "rating": 4.6,
       "sizes": ["30","32","34","36","38"],
-      "colors": ["Dark Blue","Black"],
+      "colors": ["DarkBlue", "Black"],
       "variants": [
-        {"size":"32","color":"Dark Blue","stock":10},
-        {"size":"34","color":"Dark Blue","stock":7},
+        {"size":"32","color":"DarkBlue","stock":10},
+        {"size":"34","color":"DarkBlue","stock":7},
         {"size":"36","color":"Black","stock":5}
       ],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
@@ -24,7 +24,7 @@
       "price": { "original": 64.99, "currency": "USD" },
       "rating": 4.7,
       "sizes": ["30","32","34","36"],
-      "colors": ["Indigo","Gray"],
+      "colors": ["Indigo", "Gray"],
       "variants": [
         {"size":"32","color":"Indigo","stock":9},
         {"size":"34","color":"Gray","stock":6}
@@ -39,8 +39,8 @@
       "price":{"original":54.5,"discounted":44.5,"currency":"USD"},
       "rating":4.4,
       "sizes":["32","34","36","38","40"],
-      "colors":["Mid Blue","Stone"],
-      "variants":[{"size":"36","color":"Mid Blue","stock":8},{"size":"38","color":"Stone","stock":4}],
+      "colors":["RoyalBlue", "SlateGray"],
+      "variants":[{"size":"36","color":"RoyalBlue","stock":8},{"size":"38","color":"SlateGray","stock":4}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -51,8 +51,8 @@
       "price":{"original":68.0,"currency":"USD"},
       "rating":4.5,
       "sizes":["30","32","34","36"],
-      "colors":["Black","Washed Blue"],
-      "variants":[{"size":"30","color":"Black","stock":5},{"size":"34","color":"Washed Blue","stock":6}],
+      "colors":["Black", "SteelBlue"],
+      "variants":[{"size":"30","color":"Black","stock":5},{"size":"34","color":"SteelBlue","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -63,8 +63,8 @@
       "price":{"original":61.99,"discounted":52.99,"currency":"USD"},
       "rating":4.3,
       "sizes":["32","34","36","38"],
-      "colors":["Vintage Blue"],
-      "variants":[{"size":"34","color":"Vintage Blue","stock":7}],
+      "colors":["CadetBlue"],
+      "variants":[{"size":"34","color":"CadetBlue","stock":7}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -75,8 +75,8 @@
       "price":{"original":66.25,"currency":"USD"},
       "rating":4.6,
       "sizes":["30","32","34","36","38"],
-      "colors":["Dark Indigo","Black"],
-      "variants":[{"size":"32","color":"Dark Indigo","stock":9},{"size":"36","color":"Black","stock":5}],
+      "colors":["MidnightBlue", "Black"],
+      "variants":[{"size":"32","color":"MidnightBlue","stock":9},{"size":"36","color":"Black","stock":5}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -87,8 +87,8 @@
       "price":{"original":63.4,"discounted":55.4,"currency":"USD"},
       "rating":4.2,
       "sizes":["32","34","36","38","40"],
-      "colors":["Light Blue","Rinse"],
-      "variants":[{"size":"38","color":"Light Blue","stock":6},{"size":"34","color":"Rinse","stock":8}],
+      "colors":["LightBlue", "Navy"],
+      "variants":[{"size":"38","color":"LightBlue","stock":6},{"size":"34","color":"Navy","stock":8}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -99,8 +99,8 @@
       "price":{"original":89.99,"currency":"USD"},
       "rating":4.9,
       "sizes":["30","32","34","36"],
-      "colors":["Raw Indigo"],
-      "variants":[{"size":"32","color":"Raw Indigo","stock":4},{"size":"34","color":"Raw Indigo","stock":3}],
+      "colors":["DarkSlateBlue"],
+      "variants":[{"size":"32","color":"DarkSlateBlue","stock":4},{"size":"34","color":"DarkSlateBlue","stock":3}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -111,7 +111,7 @@
       "price":{"original":49.99,"discounted":39.99,"currency":"USD"},
       "rating":4.1,
       "sizes":["30","32","34","36","38","40"],
-      "colors":["Blue","Black"],
+      "colors":["Blue", "Black"],
       "variants":[{"size":"36","color":"Blue","stock":11},{"size":"40","color":"Black","stock":5}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
@@ -123,8 +123,8 @@
       "price":{"original":69.5,"currency":"USD"},
       "rating":4.7,
       "sizes":["30","32","34","36","38"],
-      "colors":["Dark Blue","Charcoal"],
-      "variants":[{"size":"32","color":"Charcoal","stock":6},{"size":"38","color":"Dark Blue","stock":7}],
+      "colors":["DarkBlue", "Charcoal"],
+      "variants":[{"size":"32","color":"Charcoal","stock":6},{"size":"38","color":"DarkBlue","stock":7}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -135,8 +135,8 @@
       "price":{"original":69.5,"currency":"USD"},
       "rating":4.7,
       "sizes":["30","32","34","36","38"],
-      "colors":["Dark Blue","Charcoal"],
-      "variants":[{"size":"32","color":"Charcoal","stock":6},{"size":"38","color":"Dark Blue","stock":7}],
+      "colors":["DarkBlue", "Charcoal"],
+      "variants":[{"size":"32","color":"Charcoal","stock":6},{"size":"38","color":"DarkBlue","stock":7}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     }
   ]
