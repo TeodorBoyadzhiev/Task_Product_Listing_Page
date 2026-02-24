@@ -63,7 +63,7 @@ const PLP = () => {
     return (
     <div className="plp-container">
         <div className='plp-toolbar'>
-            <ProductCounter />
+            <ProductCounter products={products} displayLimit={displayLimit} />
         </div>
         <div className="plp-wrapper row row-cols-2">
             <div className="filter col-2">

@@ -1,8 +1,10 @@
 import './ProductCounter.css'
 
-const ProductCounter = () => {
+const ProductCounter = ({products, displayLimit}) => {
+  const currectProdcutsShown = Math.min(displayLimit, products?.products?.length || 0);
+  
   return (
-    <div className='product-counter row'>0 out of 0 products displayed</div>
+    <div className='product-counter row'>{currectProdcutsShown} out of {products?.products?.length || 0} products displayed</div>
   )
 }
 
