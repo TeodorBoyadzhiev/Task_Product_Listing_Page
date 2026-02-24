@@ -14,9 +14,11 @@ import { useEffect, useState } from 'react'
 
 const PLP = () => {
     const [products, setProducts] = useState(null);
+    const [filteredProducts, setFilteredProducts] = useState(null);
     const [shortDescription, setShortDescription] = useState('');
     const [displayLimit, setDisplayLimit] = useState(7);
     const [sort, setSort] = useState('asc');
+    const [filters, setFilters] = useState({});
     const [showToast, setShowToast] = useState(false);
 
     const location = useLocation();
@@ -24,10 +26,12 @@ const PLP = () => {
 
     useEffect(() => {
         setProducts(null);
+        setFilteredProducts(null);
         setSort('asc');
 
         const {newProducts, shortDescription} = categoryProducts(cat);
         setProducts(newProducts);
+        setFilteredProducts(newProducts);
         setShortDescription(shortDescription);
         setDisplayLimit(7)
     }, [location.pathname]);
@@ -57,6 +61,21 @@ const PLP = () => {
         });
     }, [sort]);
 
+    console.log("Filters object length:", Object.keys(filters).length);
+
+    useEffect(() => {
+        (cat && Object.keys(filters).length) && setFilteredProducts(() => ({
+            ...products,
+            products: products.products.filter((item) =>
+                Object.entries(filters).every(([key, value]) =>
+                    item[key]?.includes(value)
+                )
+            )
+        }));
+    }, [filters]);
+
+    console.log(filteredProducts);
+
     const handleAddToCart = () => {
         setShowToast(true);
     
@@ -69,6 +88,10 @@ const PLP = () => {
         setDisplayLimit(prev => prev + 7);
     };
 
+    const productsToDisplay = Object.keys(filters).length > 0 
+        ? filteredProducts 
+        : products;
+
     return (
     <div className="plp-container">
         <div className='plp-toolbar'>
@@ -76,7 +99,7 @@ const PLP = () => {
         </div>
         <div className="plp-wrapper row row-cols-2">
             <div className="filter col-2">
-                <Filter />
+                <Filter cat={cat} products={products} filters={filters} setFilters={setFilters} />
             </div>
             <div className="product-list-wrapper col-10">
                 <div className="product-list-heading d-flex justify-content-between">
@@ -89,7 +112,7 @@ const PLP = () => {
                 </div>
 
                 <div className="product-list row row-cols-4">
-                    {cat ? products?.products?.slice(0, displayLimit).map((product) => (
+                    {cat ? productsToDisplay?.products?.slice(0, displayLimit).map((product) => (
                         <ProductTile product={product} key={product.id} handleAddToCart={handleAddToCart} />
                         ))
                         : <div className="no-category col">Please select a category.</div>
@@ -99,7 +122,7 @@ const PLP = () => {
                 {showToast && <div className="cart-toast">Product added to cart!</div>}
 
                 <div className="load-more-btn">
-                   {products?.products?.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
+                   {productsToDisplay?.products?.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
                 </div>
             </div>
         </div>

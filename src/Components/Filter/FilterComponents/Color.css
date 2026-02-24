@@ -1,11 +1,11 @@
 .color-wrapper {
     .color-options {    
-        .color-option {
-            border: 2px solid #fff;
+        .colors-option {
+            border: 2px solid #2c2b2b;
             background-color: #666;
             display: block;
             height: 26px;
-            margin-right: 6px;
+            margin: 5px;
             overflow: hidden;
             padding: 0;
             width: 26px;

@@ -1,26 +1,19 @@
 import './Color.css'
+import Swatches from './Swatches';
 
-const Color = () => {
+const Color = ({products, onChange}) => {
+  const allColors = [...new Set(products?.products?.flatMap(p => p.colors) || [])];
+
   return (
     <div className="color-wrapper">
         <div className='filter-name row'>Color</div>
-        <ul className='color-options row row-cols-4'>
-          <li className='color-option red' value='red'></li>
-          <li className='color-option blue' value='blue'></li>
-          <li className='color-option green' value='green'></li>
-          <li className='color-option yellow' value='yellow'></li>
-          <li className='color-option red' value='red'></li>
-          <li className='color-option blue' value='blue'></li>
-          <li className='color-option green' value='green'></li>
-          <li className='color-option yellow' value='yellow'></li>
-          <li className='color-option red' value='red'></li>
-          <li className='color-option blue' value='blue'></li>
-          <li className='color-option green' value='green'></li>
-          <li className='color-option yellow' value='yellow'></li>
-          <li className='color-option red' value='red'></li>
-          <li className='color-option blue' value='blue'></li>
-          <li className='color-option green' value='green'></li>
-          <li className='color-option yellow' value='yellow'></li>
+        <ul className='color-options row row-cols-4' >
+          {products?.products 
+              ? allColors.map((color) => (
+                <Swatches filterName={color} key={color} onChange={onChange} type="colors" />
+                ))
+              : <div className="no-category col">Please select a category.</div>
+            }
         </ul>
     </div>
   )

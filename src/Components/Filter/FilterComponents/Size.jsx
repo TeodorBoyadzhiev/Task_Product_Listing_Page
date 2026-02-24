@@ -1,14 +1,19 @@
 import './Size.css'
+import Swatches from './Swatches'
 
-const Size = () => {
+const Size = ({products, onChange}) => {
+  const allSizes = [...new Set(products?.products?.flatMap(p => p.sizes) || [])];
+
   return (
     <div className="size-wrapper">
         <div className='filter-name row'>Size</div>
         <ul className='size-options row'>
-            <li className='size-option small' value='small'>Small</li>
-            <li className='size-option medium' value='medium'>Medium</li>
-            <li className='size-option large' value='large'>Large</li>
-            <li className='size-option xlarge' value='xlarge'>X-Large</li>
+            {products?.products 
+              ? allSizes.map((size) => (
+                <Swatches filterName={size} key={size} onChange={onChange} type="size" />
+                ))
+              : <div className="no-category col">Please select a category.</div>
+            }
         </ul>
     </div>
   )
