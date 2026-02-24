@@ -1,6 +1,6 @@
 import './ProductTile.css'
 
-const ProductTile = ({ product }) => {
+const ProductTile = ({ product, handleAddToCart }) => {
   return (
     <article className="product-card" key={product.id}>
       
@@ -42,7 +42,7 @@ const ProductTile = ({ product }) => {
           )}
         </div>
 
-        <button className="add-to-cart-btn">
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
           Add to Cart
         </button>
 

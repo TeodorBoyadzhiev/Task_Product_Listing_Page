@@ -17,6 +17,7 @@ const PLP = () => {
     const [shortDescription, setShortDescription] = useState('');
     const [displayLimit, setDisplayLimit] = useState(7);
     const [sort, setSort] = useState('asc');
+    const [showToast, setShowToast] = useState(false);
 
     const location = useLocation();
     const cat = location.pathname.split('/')[1];
@@ -56,6 +57,14 @@ const PLP = () => {
         });
     }, [sort]);
 
+    const handleAddToCart = () => {
+        setShowToast(true);
+    
+        setTimeout(() => {
+            setShowToast(false);
+        }, 3000);
+    };
+
     const handleLoadMore = () => {
         setDisplayLimit(prev => prev + 7);
     };
@@ -81,11 +90,14 @@ const PLP = () => {
 
                 <div className="product-list row row-cols-4">
                     {cat ? products?.products?.slice(0, displayLimit).map((product) => (
-                        <ProductTile product={product} key={product.id} />
+                        <ProductTile product={product} key={product.id} handleAddToCart={handleAddToCart} />
                         ))
                         : <div className="no-category col">Please select a category.</div>
                     }   
                 </div>
+                
+                {showToast && <div className="cart-toast">Product added to cart!</div>}
+
                 <div className="load-more-btn">
                    {products?.products?.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
                 </div>
