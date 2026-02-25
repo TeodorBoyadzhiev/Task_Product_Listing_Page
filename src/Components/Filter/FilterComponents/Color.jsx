@@ -6,7 +6,7 @@ const Color = ({products, filters, onChange}) => {
 
   return (
     <div className="filter-wrapper">
-        <div className='filter-name row'>Color</div>
+        <div className='filter-name row'>Colors</div>
         <ul className='color-options row row-cols-4' >
           {products?.products 
               ? allColors.map((color) => (

@@ -6,7 +6,7 @@ const Size = ({products, filters, onChange}) => {
 
   return (
     <div className="filter-wrapper">
-        <div className='filter-name row'>Size</div>
+        <div className='filter-name row'>Sizes</div>
         <ul className='size-options row'>
             {products?.products 
               ? allSizes.map((size) => (

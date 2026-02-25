@@ -3,7 +3,6 @@ import './ProductTile.css'
 const ProductTile = ({ product, handleAddToCart }) => {
   return (
     <article className="product-card" key={product.id}>
-      
       <div className="product-image-wrapper">
         <img
           src={product.image ? product.image : 'https://fdcdn.akamaized.net/m/310x465/products/113…b8a028daa90a6f90a7aac50f3144fe.jpg?s=71e1diczRlcq'}
@@ -45,9 +44,7 @@ const ProductTile = ({ product, handleAddToCart }) => {
         <button className="add-to-cart-btn" onClick={handleAddToCart}>
           Add to Cart
         </button>
-
       </div>
-
     </article>
   )
 }

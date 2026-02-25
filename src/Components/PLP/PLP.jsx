@@ -86,10 +86,12 @@ const PLP = () => {
         <div className='plp-toolbar'>
             <ProductCounter products={productsToDisplay} displayLimit={displayLimit} />
         </div>
+
         <div className="plp-wrapper row row-cols-2">
             <div className="filter col-2">
                 <Filter cat={cat} products={products} filters={filters} setFilters={setFilters} />
             </div>
+
             <div className="product-list-wrapper col-10">
                 <div className="product-list-heading d-flex justify-content-between">
                     <div className="category-description">
@@ -101,7 +103,7 @@ const PLP = () => {
                 </div>
 
                 <div className="product-list row row-cols-4">
-                    {cat ? productsToDisplay.slice(0, displayLimit).map((product) => (
+                    {(cat && productsToDisplay.length > 0) ? productsToDisplay.slice(0, displayLimit).map((product) => (
                         <ProductTile product={product} key={product.id} handleAddToCart={handleAddToCart} />
                         ))
                         : <div className="no-category col">Please select a category.</div>
@@ -110,10 +112,11 @@ const PLP = () => {
                 
                 {showToast && <div className="cart-toast">Product added to cart!</div>}
 
-                <div className="load-more-btn">
-                   {productsToDisplay.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
-                </div>
             </div>
+        </div>
+
+        <div className="load-more-btn">
+            {productsToDisplay.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
         </div>
     </div>
   )

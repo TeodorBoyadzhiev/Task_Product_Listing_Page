@@ -5,7 +5,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px;
 
         .product-sorting {
             cursor: pointer;
@@ -14,8 +13,6 @@
     }
 
     .plp-wrapper {
-        margin-top: 15px;
-
         .filter {
             margin-top: 15px;
         }
@@ -44,12 +41,24 @@
                     height: 450px;
                 }
             }
-
-
-            .load-more-btn {
-                width: fit-content;
-                margin: 35px auto;
-            }
         }
+
+        .cart-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: #28a745;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+    }
+
+    .load-more-btn {
+        width: fit-content;
+        margin: 35px auto 0px;
     }
 }

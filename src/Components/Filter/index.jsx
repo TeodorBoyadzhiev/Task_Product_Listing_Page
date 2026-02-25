@@ -32,7 +32,7 @@ const Filter = ({cat, products, filters, setFilters}) => {
 
   return (
     <div className='filter-container'>
-        <div className='filter-title row'>Filter</div>
+        <div className='filter-title row'>Filters</div>
         <div className='filters-wrapper'>
           <div className="size">
             <Size products={products} filters={filters} onChange={handleFilters} />
