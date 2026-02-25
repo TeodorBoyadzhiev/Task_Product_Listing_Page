@@ -5,4 +5,14 @@
     border-radius: 12px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    @media only screen and (max-device-width: 415px) {
+        width: 51%;
+        height: 50px;
+    }
+
+    @media only screen and (min-device-width: 416px) and (max-device-width: 768px) {
+        width: 25%;
+        height: 50px;
+    }
 }

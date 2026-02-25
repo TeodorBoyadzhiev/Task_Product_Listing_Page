@@ -32,7 +32,13 @@ const Filter = ({cat, products, filters, setFilters}) => {
 
   return (
     <div className='filter-container'>
-        <div className='filter-title row'>Filters</div>
+       <div className="filter-content">
+
+        <div className="filter-heading">
+          <div className='filter-title row'>Filters</div>
+          <button className="close-btn d-md-none" onClick={() => setIsFilterOpen(false)}>×</button>
+        </div>
+        
         <div className='filters-wrapper'>
           <div className="size">
             <Size products={products} filters={filters} onChange={handleFilters} />
@@ -44,6 +50,7 @@ const Filter = ({cat, products, filters, setFilters}) => {
             <PriceSlider onChange={handlePriceChange} />
           </div>
         </div>
+       </div>
     </div>
   )
 }

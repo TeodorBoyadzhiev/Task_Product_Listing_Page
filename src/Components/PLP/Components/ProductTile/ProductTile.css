@@ -5,10 +5,15 @@
     border: 1px solid #eee;
     transition: transform .2s ease, box-shadow .2s ease;
     margin: 10px;
+    width: 30%;
 
     &:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    @media only screen and (max-device-width: 768px) {
+        width: 100%;
     }
 
     .product-image-wrapper {

@@ -3,11 +3,22 @@
    color: #fff;
    padding: 60px 0 20px;
    margin-top: 40px;
+   
+   @media only screen and (max-device-width: 415px) {
+      padding: 30px 15px;
+   }
+
+   @media only screen and (min-device-width: 416px) and (max-device-width: 768px) {
+      padding: 35px 15px;
+   }
 
    .main-section {
       margin-bottom: 40px;
 
       .brand-info {
+         @media only screen and (max-device-width: 415px) {
+            margin-bottom: 20px;
+         }
          .logo {
             font-size: 24px;
             letter-spacing: 2px;
@@ -23,6 +34,12 @@
       .links-group {
          display: flex;
          justify-content: space-around;
+
+         @media only screen and (max-device-width: 415px) {
+            justify-content: normal;
+            gap: 45px;
+            margin-bottom: 20px;
+         }
 
          h3 {
             font-size: 14px;
@@ -71,6 +88,10 @@
 
                &:focus {
                   border-color: #555;
+               }
+
+               @media only screen and (min-device-width: 415px) and (max-device-width: 768px) {
+                  width: 50%;
                }
             }
 

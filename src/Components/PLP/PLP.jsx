@@ -21,6 +21,8 @@ const PLP = () => {
     const [filters, setFilters] = useState({});
     const [showToast, setShowToast] = useState(false);
 
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+
     const location = useLocation();
     const cat = location.pathname.split('/')[1];
 
@@ -87,37 +89,51 @@ const PLP = () => {
             <ProductCounter products={productsToDisplay} displayLimit={displayLimit} />
         </div>
 
-        <div className="plp-wrapper row row-cols-2">
-            <div className="filter col-2">
-                <Filter cat={cat} products={products} filters={filters} setFilters={setFilters} />
-            </div>
+        <div className="plp-wrapper">
+            <div className="itemsList d-flex">
 
-            <div className="product-list-wrapper col-10">
-                <div className="product-list-heading d-flex justify-content-between">
-                    <div className="category-description">
-                        <div className="category-title">{cat}</div>
-                        <div className="category-shortDescription">{shortDescription}</div>
+                <div className={`filter col-md-2 ${isFilterOpen ? 'active' : ''}`}>
+                    <Filter cat={cat} products={products} filters={filters} setFilters={setFilters} />
+                </div>
+
+                <div className="product-list-wrapper">
+                    <div className="product-list-heading d-flex justify-content-between">
+                        <div className="category-description">
+                            <div className="category-title">{cat}</div>
+                            <div className="category-shortDescription">{shortDescription}</div>
+                        </div>
+
+                        <div className="product-list-tools d-flex justify-content-between">
+                            <Sorting sort={sort} setSort={setSort} />
+                            <button 
+                                className="filter-toggle-btn d-lg-none" 
+                                onClick={() => setIsFilterOpen(true)}
+                            >
+                                Filters & Sorting
+                            </button>
+                        </div>
+                        
+                    </div>
+
+                    <div className="product-list">
+                        {(cat && productsToDisplay.length > 0) ? productsToDisplay.slice(0, displayLimit).map((product) => (
+                            <ProductTile product={product} key={product.id} handleAddToCart={handleAddToCart} />
+                            ))
+                            : <div className="no-category col">Please select a category.</div>
+                        }   
                     </div>
                     
-                    <Sorting sort={sort} setSort={setSort} />
-                </div>
+                    {showToast && <div className="cart-toast">Product added to cart!</div>}
 
-                <div className="product-list row row-cols-4">
-                    {(cat && productsToDisplay.length > 0) ? productsToDisplay.slice(0, displayLimit).map((product) => (
-                        <ProductTile product={product} key={product.id} handleAddToCart={handleAddToCart} />
-                        ))
-                        : <div className="no-category col">Please select a category.</div>
-                    }   
                 </div>
-                
-                {showToast && <div className="cart-toast">Product added to cart!</div>}
-
             </div>
         </div>
 
         <div className="load-more-btn">
             {productsToDisplay.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
         </div>
+
+        {isFilterOpen && <div className="overlay" onClick={() => setIsFilterOpen(false)}></div>}
     </div>
   )
 }
