@@ -23,7 +23,7 @@
       "shortDescription": "Modern slim-fit T-shirt made with premium stretch fabric.",
       "price": { "original": 24.99, "currency": "USD" },
       "rating": 4.8,
-      "sizes":["M","L","XL"],
+      "sizes":["M","L","XL", "XXL"],
       "colors":["White"],
       "variants":[
         {"size":"M","color":"White","stock":6},
@@ -43,7 +43,7 @@
       "id":"ts004","name":"Athletic Performance Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/34377/34376666/images/res_b022c94c6dc5987b5fdc7fde05a6cfd3.jpg?s=6V5MlisSYhvW",
       "shortDescription":"Breathable moisture-wicking fabric for sports and training.",
       "price":{"original":26.5,"currency":"USD"},
-      "rating":4.6,"sizes":["S","M","L"],"colors":["Blue","Black"],
+      "rating":4.6,"sizes":["S","L"],"colors":["Blue","Black"],
       "variants":[{"size":"S","color":"Blue","stock":5},{"size":"M","color":"Black","stock":11}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
@@ -51,7 +51,7 @@
       "id":"ts005","name":"Minimal Logo T-Shirt","image":"https://fdcdn.akamaized.net/m/780x1170/products/95109/95108325/images/res_15705d04e1623825adb601d767f18989.jpg?s=VMGNBhhBT77E",
       "shortDescription":"Clean minimalist T-shirt with subtle chest logo.",
       "price":{"original":18.99,"discounted":15.99,"currency":"USD"},
-      "rating":4.3,"sizes":["S","M","L","XL"],"colors":["White","Green","Black"],
+      "rating":4.3,"sizes":["S","L","XL"],"colors":["White","Green","Black"],
       "variants":[{"size":"L","color":"Green","stock":10},{"size":"M","color":"White","stock":8}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
@@ -59,7 +59,7 @@
       "id":"ts006","name":"Oversized Street Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/93448/93447837/images/res_c9b9f4b7cd9ec67fd1e6f8d787506d97.jpg?s=asH1pkvZNyuS",
       "shortDescription":"Relaxed oversized fit for modern streetwear style.",
       "price":{"original":27.99,"currency":"USD"},
-      "rating":4.7,"sizes":["M","L","XL"],"colors":["Black","Blue"],
+      "rating":4.7,"sizes":["L","XL"],"colors":["Black","Blue"],
       "variants":[{"size":"XL","color":"Black","stock":4},{"size":"L","color":"Blue","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
@@ -83,8 +83,8 @@
       "id":"ts009","name":"Soft Touch Modal Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/84320/84319849/images/res_fbcf24fc34238bc58f972c40325c7839.jpg?s=qAbZSKTdzVVu",
       "shortDescription":"Ultra-soft modal blend T-shirt with smooth finish.",
       "price":{"original":25.25,"currency":"USD"},
-      "rating":4.5,"sizes":["S","M","L","XL"],"colors":["WhiteBlue","Black","Green"],
-      "variants":[{"size":"S","color":"WhiteBlue","stock":6},{"size":"XL","color":"Black","stock":3}],
+      "rating":4.5,"sizes":["S","M","L","XL"],"colors":["Brown","Black","Green"],
+      "variants":[{"size":"S","color":"Brown","stock":6},{"size":"XL","color":"Black","stock":3}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -96,11 +96,11 @@
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
-      "id":"ts011","name":"Heavyweight Premium Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/94038/94037220/images/res_d227c77f565b805e98106894b09ca932.jpg?s=HT_nI8ZGcAgL",
+      "id":"ts011","name":"Heavyweight Premium Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/110249/110248111/images/res_c45c52780d8a69db27aac014ebd4ae3b.jpg?s=CL-ivG9EJYNG",
       "shortDescription":"Durable heavyweight cotton for structured fit.",
       "price":{"original":28.99,"currency":"USD"},
-      "rating":4.8,"sizes":["M","L","XL"],"colors":["Black","WhiteBlue", "Blue"],
-      "variants":[{"size":"L","color":"WhiteBlue","stock":6}],
+      "rating":4.8,"sizes":["M","L","XL", "XXL"],"colors":["Black","Brown", "Blue"],
+      "variants":[{"size":"L","color":"Brown","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
@@ -168,11 +168,11 @@
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     },
     {
-      "id":"ts020","name":"Signature Collection Tee","image":"",
+      "id":"ts020","name":"Signature Collection Tee","image":"https://fdcdn.akamaized.net/m/780x1170/products/113947/113946415/images/res_be758d1144bc88fd28f7d20d17bde451.jpg?s=Kizv4K1rs1DO",
       "shortDescription":"Premium signature series cotton T-shirt.",
       "price":{"original":31.99,"currency":"USD"},
-      "rating":4.9,"sizes":["M","L","XL"],"colors":["Black","WhiteBlue"],
-      "variants":[{"size":"M","color":"WhiteBlue","stock":6}],
+      "rating":4.9,"sizes":["M","L","XL"],"colors":["Black","Brown"],
+      "variants":[{"size":"M","color":"Brown","stock":6}],
       "addToCart":{"enabled":true,"buttonText":"Add to Cart","successMessage":"Product added to cart"}
     }
   ]
