@@ -1,7 +1,101 @@
 .footer {
-   bottom: 0;
-   height: 50px;
-   background-color: wheat;
-   width: stretch;
-   margin-right: 20px;
+   background-color: #111;
+   color: #fff;
+   padding: 60px 0 20px;
+   margin-top: 40px;
+
+   .main-section {
+      margin-bottom: 40px;
+
+      .brand-info {
+         .logo {
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+         }
+
+         .description {
+            color: #888;
+            font-size: 14px;
+         }
+      }
+
+      .links-group {
+         display: flex;
+         justify-content: space-around;
+
+         h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #fff;
+         }
+
+         ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+               margin-bottom: 10px;
+
+               a {
+                  color: #888;
+                  text-decoration: none;
+                  transition: color 0.3s;
+
+                  &:hover {
+                     color: #fff;
+                  }
+               }
+            }
+         }
+      }
+
+      .newsletter-section {
+         h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+         }
+
+         .input-group {
+            display: flex;
+
+            input {
+               background: #222;
+               border: 1px solid #333;
+               padding: 10px;
+               color: #fff;
+               flex: 1;
+               outline: none;
+
+               &:focus {
+                  border-color: #555;
+               }
+            }
+
+            button {
+               background: #fff;
+               color: #111;
+               border: none;
+               padding: 0 20px;
+               font-weight: bold;
+               cursor: pointer;
+
+               &:hover {
+                  background: #ddd;
+               }
+            }
+         }
+      }
+   }
+
+   /* Nested Legal Bar */
+   .legal-bar {
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      text-align: center;
+      color: #555;
+      font-size: 12px;
+   }
 }
