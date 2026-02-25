@@ -1,23 +1,37 @@
-.size-wrapper {
+.filter-wrapper {
     .size-options {
         list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
 
-        .size-option {
-            border: 1px solid #000;
-            border-radius: 4px;
-            color: #666;
+        .sizes-option {
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+            color: #111;
             cursor: pointer;
-            display: block;
-            float: left;
-            font-size: 12px;
-            height: 23px;
-            line-height: 23px;
-            margin: 5px 10px 5px 0;
-            min-width: 50px;
-            width: 150px;
-            padding: 0 4px;
-            text-align: center;
-            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 500;
+            height: 40px;
+            min-width: 45px;
+            padding: 0 10px;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
         }
-    }
+        
+        .sizes-option:hover {
+            border-color: #111;
+        }
+        
+        .sizes-option.active {
+            background-color: #111;
+            color: #fff;
+            border-color: #111;
+        }
+    }  
 }
+

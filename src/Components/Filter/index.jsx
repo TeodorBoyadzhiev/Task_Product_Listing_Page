@@ -1,19 +1,33 @@
+// styles
 import './Filter.css'
+// components
 import Color from './FilterComponents/Color'
 import Size from './FilterComponents/Size'
 import PriceSlider from './FilterComponents/PriceSlider'
 
 const Filter = ({cat, products, filters, setFilters}) => {
   const handlePriceChange = ([min, max]) => {
-    console.log("Selected range:", min, max);
+    setFilters({
+          ...filters,
+          price: [min, max]
+      });
   };
 
   const handleFilters = (e) => {
-      const value = e.target.dataset.value;
-       setFilters({
-          ...filters,
-          [e.target.dataset.name]: value
-      });
+    const { name, value } = e.target.dataset;
+    
+    setFilters((prevFilters) => {
+       const currentSelection = prevFilters[name] || [];
+
+      const newSelection = currentSelection.includes(value)
+        ? currentSelection.filter((item) => item !== value)
+        : [...currentSelection, value];
+
+        return {
+          ...prevFilters,
+          [name]: newSelection,
+        }
+    });
   }
 
   return (
@@ -21,10 +35,10 @@ const Filter = ({cat, products, filters, setFilters}) => {
         <div className='filter-title row'>Filter</div>
         <div className='filters-wrapper'>
           <div className="size">
-            <Size cat={cat} products={products} onChange={handleFilters} />
+            <Size products={products} filters={filters} onChange={handleFilters} />
           </div>
           <div className="color">
-            <Color products={products} onChange={handleFilters} />
+            <Color products={products} filters={filters} onChange={handleFilters} />
           </div>
           <div className="price-slider">
             <PriceSlider onChange={handlePriceChange} />

@@ -1,10 +1,18 @@
 .priceSlider-wrapper{
     .filter-name {
-        margin-bottom: 10px; 
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 700;
+        
     }
 
     .slider-wrapper {
         position: relative;
-        height: 30;
+
+        input[type='range'] {
+            height: 6px;
+            border-radius: 10px;
+        }
     }
 }

@@ -10,11 +10,11 @@ import LoadMoreButton from './Components/LoadMoreButton'
 import {categoryProducts} from './helperFuntions'
 // router
 import { useLocation } from 'react-router'
-import { useEffect, useState } from 'react'
+// hooks
+import { useEffect, useMemo, useState } from 'react'
 
 const PLP = () => {
     const [products, setProducts] = useState(null);
-    const [filteredProducts, setFilteredProducts] = useState(null);
     const [shortDescription, setShortDescription] = useState('');
     const [displayLimit, setDisplayLimit] = useState(7);
     const [sort, setSort] = useState('asc');
@@ -26,12 +26,11 @@ const PLP = () => {
 
     useEffect(() => {
         setProducts(null);
-        setFilteredProducts(null);
         setSort('asc');
 
         const {newProducts, shortDescription} = categoryProducts(cat);
         setProducts(newProducts);
-        setFilteredProducts(newProducts);
+        setFilters({});
         setShortDescription(shortDescription);
         setDisplayLimit(7)
     }, [location.pathname]);
@@ -39,42 +38,6 @@ const PLP = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
-
-    useEffect(() => {
-        if (!products?.products) return;
-
-        setProducts((prevState) => {
-            const sortedList = [...prevState.products];
-            const getActivePrice = (p) => p.price.discounted || p.price.original;
-
-            if (sort === 'price-low') {
-                sortedList.sort((a, b) => getActivePrice(a) - getActivePrice(b));
-            } else if (sort === 'price-high') {
-                sortedList.sort((a, b) => getActivePrice(b) - getActivePrice(a));
-            } else if (sort === 'asc') {
-                sortedList.sort((a, b) => a.name.localeCompare(b.name));
-            } else if (sort === 'desc') {
-                sortedList.sort((a, b) => b.name.localeCompare(a.name));
-            }
-
-            return { ...prevState, products: sortedList };
-        });
-    }, [sort]);
-
-    console.log("Filters object length:", Object.keys(filters).length);
-
-    useEffect(() => {
-        (cat && Object.keys(filters).length) && setFilteredProducts(() => ({
-            ...products,
-            products: products.products.filter((item) =>
-                Object.entries(filters).every(([key, value]) =>
-                    item[key]?.includes(value)
-                )
-            )
-        }));
-    }, [filters]);
-
-    console.log(filteredProducts);
 
     const handleAddToCart = () => {
         setShowToast(true);
@@ -88,14 +51,40 @@ const PLP = () => {
         setDisplayLimit(prev => prev + 7);
     };
 
-    const productsToDisplay = Object.keys(filters).length > 0 
-        ? filteredProducts 
-        : products;
+    const productsToDisplay = useMemo(() => {
+        if (!products?.products) return [];
+
+        let list = products.products.filter((item => 
+            Object.entries(filters).every(([key, value]) => 
+                {
+                    if (!value || value.length === 0) return true;
+
+                    if (key === 'price') {
+                        const productPrice = item.price.discounted || item.price.original;
+
+                        return (productPrice >= value[0] && productPrice <= value[1]);
+                    }
+                    
+                    return value.some(val => item[key]?.includes(val));
+                })
+            )
+        );
+
+        const getActivePrice = (p) => p.price.discounted || p.price.original;
+
+        if (sort === 'price-low') list.sort((a, b) => getActivePrice(a) - getActivePrice(b));
+        if (sort === 'price-high') list.sort((a, b) => getActivePrice(b) - getActivePrice(a));
+        if (sort === 'asc') list.sort((a, b) => a.name.localeCompare(b.name));
+        if (sort === 'desc') list.sort((a, b) => b.name.localeCompare(a.name));
+
+        return list;
+
+    }, [products, filters, sort]);
 
     return (
     <div className="plp-container">
         <div className='plp-toolbar'>
-            <ProductCounter products={products} displayLimit={displayLimit} />
+            <ProductCounter products={productsToDisplay} displayLimit={displayLimit} />
         </div>
         <div className="plp-wrapper row row-cols-2">
             <div className="filter col-2">
@@ -112,7 +101,7 @@ const PLP = () => {
                 </div>
 
                 <div className="product-list row row-cols-4">
-                    {cat ? productsToDisplay?.products?.slice(0, displayLimit).map((product) => (
+                    {cat ? productsToDisplay.slice(0, displayLimit).map((product) => (
                         <ProductTile product={product} key={product.id} handleAddToCart={handleAddToCart} />
                         ))
                         : <div className="no-category col">Please select a category.</div>
@@ -122,7 +111,7 @@ const PLP = () => {
                 {showToast && <div className="cart-toast">Product added to cart!</div>}
 
                 <div className="load-more-btn">
-                   {productsToDisplay?.products?.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
+                   {productsToDisplay.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
                 </div>
             </div>
         </div>

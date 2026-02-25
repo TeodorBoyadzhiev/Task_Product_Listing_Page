@@ -1,10 +1,9 @@
 import './Swatches.css'
 
-const Swatches = ({filterName, onChange, type}) => {
-    console.log(filterName, type)
+const Swatches = ({filterName, onChange, type, isActive}) => {
     return (
         <li 
-            className={`${type}-option`} 
+            className={`${type}-option ${isActive ? 'active' : ''}`} 
             data-name={type} 
             data-value={filterName} 
             onClick={onChange}

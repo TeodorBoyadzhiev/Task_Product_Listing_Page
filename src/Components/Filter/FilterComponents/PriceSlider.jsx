@@ -5,8 +5,8 @@ const PriceSlider = ({
   min = 0,
   max = 1000,
   step = 10,
-  defaultMin = 20,
-  defaultMax = 800,
+  defaultMin = 0,
+  defaultMax = 100,
   onChange
 }) => {
   const [minPrice, setMinPrice] = useState(defaultMin);
@@ -42,7 +42,7 @@ const PriceSlider = ({
             position: 'absolute',
             width: '100%',
             appearance: 'none',
-            background: "linear-gradient(270deg,hsl(240deg 100% 20%) 0%,hsl(298deg 100% 21%) 0%,hsl(324deg 100% 32%) -1%,hsl(336deg 100% 42%) -1%,hsl(0deg 93% 61%) -1%,hsl(24deg 100% 57%) -2%,hsl(42deg 100% 50%) -2%,hsl(55deg 100% 50%) -1%,hsl(54deg 100% 63%) -1%,hsl(54deg 100% 70%) 0%,hsl(54deg 100% 75%) 2%,hsl(53deg 100% 81%) 5%,hsl(53deg 100% 86%) 11%,hsl(52deg 100% 91%) 21%,hsl(50deg 100% 95%) 53%)",
+            background: "linear-gradient(288deg,rgba(58, 188, 240, 1) 0%, rgba(211, 225, 240, 1) 100%, rgba(243, 225, 165, 0.85) 100%)",
           }}
         />
       </div>

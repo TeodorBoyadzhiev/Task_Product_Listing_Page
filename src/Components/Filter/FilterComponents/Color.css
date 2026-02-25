@@ -1,8 +1,12 @@
-.color-wrapper {
-    .color-options {    
+.filter-wrapper {
+    .color-options {   
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 auto;
+        
         .colors-option {
-            border: 2px solid #2c2b2b;
-            background-color: #666;
+            border: 0.5px solid lightslategray;
             display: block;
             height: 26px;
             margin: 5px;
@@ -10,6 +14,15 @@
             padding: 0;
             width: 26px;
             cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            
+            &.active {
+                outline: 2.5px solid darkgray;
+                border: 1px solid transparent;
+            }
         }
     }
 }
