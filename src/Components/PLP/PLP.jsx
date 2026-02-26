@@ -19,8 +19,8 @@ const PLP = () => {
     const [displayLimit, setDisplayLimit] = useState(7);
     const [sort, setSort] = useState('asc');
     const [filters, setFilters] = useState({});
-    const [showToast, setShowToast] = useState(false);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [showToast, setShowToast] = useState(false);
     
     const location = useLocation();
     const cat = location.pathname.split('/')[1];
@@ -84,7 +84,6 @@ const PLP = () => {
 
     }, [products, filters, sort]);
 
-
     return (
     <div className="plp-container">
         <div className='plp-toolbar'>
@@ -143,6 +142,7 @@ const PLP = () => {
                 </div>
             </div>
         </div>
+        
         {isFilterOpen && <div className="overlay" onClick={() => setIsFilterOpen(false)}></div>}
     </div>
   )

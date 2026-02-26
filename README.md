@@ -1,16 +1,32 @@
-# React + Vite
+What has been implemented
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have developed a functional Product Listing Page that allows users to browse and filter products dynamically. The implementation includes:
+ - Product list page that is showing specific category products.
 
-Currently, two official plugins are available:
+ - A responsive product grid that adapts to different screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ - A dynamic filtering for categories such as Colors and Sizes or Ascending/Descending sorting.
 
-## React Compiler
+ - A clean, user-friendly interface based on the provided design specifications.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Which technologies were used
 
-## Expanding the ESLint configuration
+The project was built using a modern frontend stack to ensure performance and scalability:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ - React 19: Used for building the component-based user interface and managing component state.
+
+ - React Router 7: Implemented to handle navigation within the application.
+
+ - Bootstrap 5: Utilized for the core layout, grid system, and responsive design elements.
+
+ - Vite: Used as the build tool and development server for fast HMR (Hot Module Replacement).
+
+ - ESLint: Integrated to maintain code quality and follow best practices.
+
+How the solution was achieved
+
+The solution was structured by breaking the UI into reusable React components (e.g., Filter, ProductTile, Sorting). I used React's hooks to save and manipulate data. By using Object.values(filters).every(...) logic, I ensured that the product list only filters when specific criteria are selected. For the layout, I used Bootstrap’s container-row-column architecture and flexbox to ensure the sidebar and product grid aligned correctly across desktop and mobile views.
+
+Any challenges encountered during development
+
+One of the primary challenges was managing the Bootstrap grid hierarchy. While Bootstrap provides a powerful layout system, nesting rows and columns to achieve a specific sidebar-to-content ratio required careful management of padding and "gutters."

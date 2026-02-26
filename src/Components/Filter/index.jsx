@@ -40,15 +40,19 @@ const Filter = ({products, filters, setFilters, setIsFilterOpen}) => {
         </div>
         
         <div className='filters-wrapper'>
+
           <div className="size">
             <Size products={products} filters={filters} onChange={handleFilters} />
           </div>
+
           <div className="color">
             <Color products={products} filters={filters} onChange={handleFilters} />
           </div>
+
           <div className="price-slider">
             <PriceSlider onChange={handlePriceChange} />
           </div>
+          
         </div>
        </div>
     </div>
