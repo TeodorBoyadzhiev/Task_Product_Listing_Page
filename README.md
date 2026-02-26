@@ -10,6 +10,7 @@ The implementation includes:
 
  - A clean, user-friendly interface based on the provided design specifications;
 
+
 Which technologies were used?
 
 The project was built using a modern frontend stack to ensure performance and scalability:
@@ -24,9 +25,11 @@ The project was built using a modern frontend stack to ensure performance and sc
 
  - ESLint: Integrated to maintain code quality and follow best practices;
 
+
 How the solution was achieved?
 
 The solution was structured by breaking the UI into reusable React components (e.g., Filter, ProductTile, Sorting). I used React's hooks to save and manipulate data. By using Object.values(filters).every(...) logic, I ensured that the product list only filters when specific criteria are selected. For the layout, I used Bootstrap’s container-row-column architecture and flexbox to ensure the sidebar and product grid aligned correctly across desktop and mobile views.
+
 
 Any challenges encountered during development?
 
