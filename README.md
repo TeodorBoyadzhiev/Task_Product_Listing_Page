@@ -34,3 +34,19 @@ The solution was structured by breaking the UI into reusable React components (e
 Any challenges encountered during development?
 
 One of the primary challenges was managing the Bootstrap grid hierarchy. While Bootstrap provides a powerful layout system, nesting rows and columns to achieve a specific sidebar-to-content ratio required careful management of padding and "gutters."
+
+
+
+If you want to run the project locally, follow this steps:
+
+    1. Clone the repository 
+        - git clone https://github.com/your-username/your-repo-name.git
+
+    2. Navigate to the project directory
+        - cd TASK_PRODUCT_LISTING_PAGE
+
+    3. Install dependencies
+        - npm i
+    
+    4. Start the development server
+        - npm run dev (typically will be available at http://localhost:5173)
