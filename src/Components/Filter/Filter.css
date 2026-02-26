@@ -1,5 +1,9 @@
 .filter-container {
     .filter-heading {
+        .close-btn {
+            transform: scale(3);
+        }
+
         @media only screen and (max-device-width: 769px) {
             display: flex;
             justify-content: space-between;

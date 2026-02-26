@@ -6,7 +6,7 @@ const PriceSlider = ({
   max = 1000,
   step = 10,
   defaultMin = 0,
-  defaultMax = 100,
+  defaultMax = 500,
   onChange
 }) => {
   const [minPrice, setMinPrice] = useState(defaultMin);

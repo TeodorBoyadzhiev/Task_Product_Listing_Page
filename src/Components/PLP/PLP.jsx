@@ -20,12 +20,13 @@ const PLP = () => {
     const [sort, setSort] = useState('asc');
     const [filters, setFilters] = useState({});
     const [showToast, setShowToast] = useState(false);
-
     const [isFilterOpen, setIsFilterOpen] = useState(false);
-
+    
     const location = useLocation();
     const cat = location.pathname.split('/')[1];
 
+    const isEmpty = Object.values(filters).every(arr => arr.length === 0);
+    
     useEffect(() => {
         setProducts(null);
         setSort('asc');
@@ -83,6 +84,7 @@ const PLP = () => {
 
     }, [products, filters, sort]);
 
+
     return (
     <div className="plp-container">
         <div className='plp-toolbar'>
@@ -93,7 +95,17 @@ const PLP = () => {
             <div className="itemsList d-flex">
 
                 <div className={`filter col-md-2 ${isFilterOpen ? 'active' : ''}`}>
-                    <Filter cat={cat} products={products} filters={filters} setFilters={setFilters} />
+                    <Filter products={products} filters={filters} setFilters={setFilters} setIsFilterOpen={setIsFilterOpen} />
+                    <div className="apply-filter-wrapper">
+                        <button 
+                            className={`apply-filter-btn d-lg-none ${isEmpty ? 'disabled' : ''}`}
+                            disabled={isEmpty} 
+                            onClick={() => setIsFilterOpen(false)}
+                        >
+                            Apply
+                        </button>
+                    </div>
+                    
                 </div>
 
                 <div className="product-list-wrapper">
@@ -122,17 +134,15 @@ const PLP = () => {
                             : <div className="no-category col">Please select a category.</div>
                         }   
                     </div>
+
+                    <div className="load-more-btn">
+                        {productsToDisplay.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
+                    </div>
                     
                     {showToast && <div className="cart-toast">Product added to cart!</div>}
-
                 </div>
             </div>
         </div>
-
-        <div className="load-more-btn">
-            {productsToDisplay.length > displayLimit && <LoadMoreButton handleLoadMore={handleLoadMore} />}
-        </div>
-
         {isFilterOpen && <div className="overlay" onClick={() => setIsFilterOpen(false)}></div>}
     </div>
   )

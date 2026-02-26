@@ -1,18 +1,31 @@
-.priceSlider-wrapper{
-    .filter-name {
-        display: block;
-        text-align: center;
-        margin-bottom: 25px;
-        font-weight: 700;
-        
-    }
-
-    .slider-wrapper {
-        position: relative;
-
-        input[type='range'] {
-            height: 6px;
-            border-radius: 10px;
+.filters-wrapper {
+    .price-slider {
+        @media only screen and (max-device-width: 768px) {  
+            display: flex;
+            justify-content: center;         
         }
+
+        .priceSlider-wrapper {
+            .filter-name {
+                display: block;
+                text-align: center;
+                margin-bottom: 25px;
+                font-weight: 700;
+    
+            }
+    
+            .slider-wrapper {
+                position: relative;
+    
+                input[type='range'] {
+                    height: 6px;
+                    border-radius: 10px;
+                }
+            }
+        
+            @media only screen and (max-device-width: 768px) {
+                width: 50%;
+            }
+        }   
     }
 }

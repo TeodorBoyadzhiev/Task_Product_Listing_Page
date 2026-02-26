@@ -12,12 +12,16 @@
         }
     }
 
-    .plp-wrapper {
+    .plp-wrapper .itemsList {
+        gap: 40px;
+
         .filter {
             margin-top: 15px;
         }
 
         .product-list-wrapper {
+            width: 100%;
+
             .product-list-heading {
                 margin: 20px 0 20px 20px;
 
@@ -39,12 +43,16 @@
                 .filter-toggle-btn {
                     width: 50%;
                     height: 50px;
-                    border-radius: 15px;
                     border: none;
-                    border-radius: 8px;
+                    border-radius: 12px;
                     background: #111;
                     color: white;
                     font-weight: 600;
+                    margin-right: 10px;
+
+                    @media only screen and (max-device-width: 415px) {
+                        width: 45%;
+                    }
 
                     @media only screen and (min-device-width: 416px) and (max-device-width: 769px) {
                         width: 25%;
@@ -92,8 +100,34 @@
         @media only screen and (max-device-width: 769px) {
             .filter {
                 position: absolute;
-                left: -60%;
+                left: -9999px;
                 z-index: 99999;
+                height: fit-content;
+
+                .apply-filter-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    margin: 60px 0 20px;
+                    
+                    .apply-filter-btn {
+                        width: 50%;
+                        height: 50px;
+                        border-radius: 15px;
+                        border: none;
+                        border-radius: 8px;
+                        background: #111;
+                        color: white;
+                        font-weight: 600;
+
+                        &.disabled {
+                            background: #b2b2b2;
+                        }
+                    
+                        @media only screen and (min-device-width: 416px) and (max-device-width: 769px) {
+                            width: 25%;
+                        }
+                    }
+                }
 
                 &.active {
                     left: 0;
@@ -101,6 +135,7 @@
                     right: 0;
                     bottom: -10px;
                     background-color: antiquewhite;
+                    width: 100%;
                 }
             }
         }

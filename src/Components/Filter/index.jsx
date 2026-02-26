@@ -5,7 +5,7 @@ import Color from './FilterComponents/Color'
 import Size from './FilterComponents/Size'
 import PriceSlider from './FilterComponents/PriceSlider'
 
-const Filter = ({cat, products, filters, setFilters}) => {
+const Filter = ({products, filters, setFilters, setIsFilterOpen}) => {
   const handlePriceChange = ([min, max]) => {
     setFilters({
           ...filters,
@@ -36,7 +36,7 @@ const Filter = ({cat, products, filters, setFilters}) => {
 
         <div className="filter-heading">
           <div className='filter-title row'>Filters</div>
-          <button className="close-btn d-md-none" onClick={() => setIsFilterOpen(false)}>×</button>
+          <button className="close-btn d-lg-none" onClick={() => setIsFilterOpen(false)}>×</button>
         </div>
         
         <div className='filters-wrapper'>
